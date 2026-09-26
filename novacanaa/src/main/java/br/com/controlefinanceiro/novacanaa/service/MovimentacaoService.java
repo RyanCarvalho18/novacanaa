@@ -30,7 +30,9 @@ public class MovimentacaoService {
         return repository.findById(id).orElse(null);
     }
 
-    public void deletarMovimentacao(Long id) {}
+    public void deletarMovimentacao(Long id) {
+        repository.deleteById(id);
+    }
 
     public Movimentacao atualizarMovimentacao(Long id, Movimentacao novosDados){
         Movimentacao antiga = buscarPorId(id);
@@ -44,6 +46,9 @@ public class MovimentacaoService {
     }
 
     public ResumoFinanceiro calcularResumo() {
+        BigDecimal totalEntrada = BigDecimal.ZERO;
+        BigDecimal totalSaida = BigDecimal.ZERO;
+
         List<Movimentacao> mov = repository.findAll();
         for (Movimentacao m : mov) {
             if (m.getTipo() == TipoMovimentacao.ENTRADA) {
