@@ -1,7 +1,8 @@
 package br.com.controlefinanceiro.novacanaa.service;
 
 import br.com.controlefinanceiro.novacanaa.movimentacao.Movimentacao;
-import br.com.controlefinanceiro.novacanaa.movimentacao.MovimentacaoRepository;
+import br.com.controlefinanceiro.novacanaa.dto.ResumoFinanceiro;
+import br.com.controlefinanceiro.novacanaa.repositorio.MovimentacaoRepository;
 import br.com.controlefinanceiro.novacanaa.movimentacao.TipoMovimentacao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,7 @@
 package br.com.controlefinanceiro.novacanaa.movimentacao;
 
 
+import br.com.controlefinanceiro.novacanaa.usuario.Account;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,8 +27,14 @@ public class Movimentacao {
     private LocalDate data;
     private String descricao;
 
+
+    private BigDecimal valor;
+
     @Enumerated(EnumType.STRING)
     private TipoMovimentacao tipo;
 
-    private BigDecimal valor;
+    //fazendo o vinculo com o account
+    @ManyToOne
+    @JoinColumn(name = "account_id") //definindo o nome da coluna no banco de dados
+    private Account account;
 }

@@ -2,7 +2,7 @@ package br.com.controlefinanceiro.novacanaa.controller;
 
 import br.com.controlefinanceiro.novacanaa.movimentacao.Movimentacao;
 import br.com.controlefinanceiro.novacanaa.service.MovimentacaoService;
-import br.com.controlefinanceiro.novacanaa.service.ResumoFinanceiro;
+import br.com.controlefinanceiro.novacanaa.dto.ResumoFinanceiro;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;

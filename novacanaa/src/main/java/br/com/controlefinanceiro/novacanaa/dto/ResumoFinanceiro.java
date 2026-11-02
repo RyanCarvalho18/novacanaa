@@ -1,4 +1,4 @@
-package br.com.controlefinanceiro.novacanaa.service;
+package br.com.controlefinanceiro.novacanaa.dto;
 
 import java.math.BigDecimal;
 
