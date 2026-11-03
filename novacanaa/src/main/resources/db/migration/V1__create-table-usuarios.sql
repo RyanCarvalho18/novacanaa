@@ -1,18 +1,18 @@
 CREATE TABLE account(
-    id BIGSERIAL PRIMARY KEY,
-    username VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(100) NOT NULL,
-    role VARCHAR(20) NOT NULL
+                        id BIGSERIAL PRIMARY KEY,
+                        username VARCHAR(100) NOT NULL UNIQUE,
+                        email VARCHAR(100) NOT NULL UNIQUE,
+                        password VARCHAR(100) NOT NULL,
+                        role VARCHAR(20) NOT NULL
 );
-    CREATE TABLE movimentacao(
 
-        id        BIGSERIAL PRIMARY KEY,
-        data      VARCHAR(50)    NOT NULL,
-        descricao VARCHAR(255)   NOT NULL,
-        valor     DECIMAL(19, 2) NOT NULL,
-        tipo      VARCHAR(20)    NOT NULL
-    );
+CREATE TABLE movimentacao(
+                             id BIGSERIAL PRIMARY KEY,
+                             data DATE NOT NULL,
+                             descricao VARCHAR(255) NOT NULL,
+                             valor DECIMAL(19,2) NOT NULL,
+                             tipo VARCHAR(20) NOT NULL
+);
 
 CREATE TABLE movimentacao_fixa(
                                   id BIGSERIAL PRIMARY KEY,
