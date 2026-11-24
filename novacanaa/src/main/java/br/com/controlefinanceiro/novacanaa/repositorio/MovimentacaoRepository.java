@@ -11,6 +11,6 @@ import java.math.BigDecimal;
 
 public interface MovimentacaoRepository extends JpaRepository<Movimentacao, Long> {
 
-    @Query("SELECT SUM(m.valor) FROM Movimentacao m WHERE m.usuario = :usuario AND m.tipo = :tipo")
-    BigDecimal somarValorPorTipo(@Param("usuario")Account user, @Param("tipo") TipoMovimentacao tipo);
+    @Query("SELECT SUM(m.valor) FROM Movimentacao m WHERE m.account = :account AND m.tipo = :tipo")
+    BigDecimal somarValorPorTipo(@Param("account")Account account, @Param("tipo") TipoMovimentacao tipo);
 }
